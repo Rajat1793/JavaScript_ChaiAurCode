@@ -29,5 +29,37 @@ function loginUser(username = "sam"){
     }
     return `${username} just logged in.`
 }
-console.log(loginUser("rajat"))
-console.log(loginUser())
+// console.log(loginUser("rajat"))
+// console.log(loginUser())
+
+function calculateCartPrice(...num){  //... is called rest operator it will convert parameters into array values
+    return num
+}
+
+// console.log(calculateCartPrice(100, 200, 300, 400)); //[ 100, 200, 300, 400 ]
+
+function calculateCartPrice(val1, val2, ...num){  //... is called rest operator it will convert parameters into array values
+    return num
+}
+
+console.log(calculateCartPrice(100, 200, 300, 400)); //[ 300, 400 ] // 100 and 200 is not in output as those values were taken by val1 and val2
+
+const user = {
+    username: "rajat",
+    price: 122
+}
+
+function handleObject(anyobject) {
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+// handleObject(user)
+handleObject({username: "ram", price: 12})
+
+const newArray = [100, 200, 300, 400]
+
+function retrunSecondValue(getArray) {
+    return getArray[2]
+}
+// console.log(retrunSecondValue(newArray));
+console.log(retrunSecondValue([100, 200, 300, 400]));
+
