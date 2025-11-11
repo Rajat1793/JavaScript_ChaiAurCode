@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Elements</title>
+</head>
+<body style="background-color: #212121; color: #f1f1f1;">
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div> -->
+</body>
+<script>
+    // const parent = document.querySelector('.parent')
+    // // console.log(parent);
+    // // console.log(parent.children);
+    // // console.log(parent.children[2].innerHTML);
+    
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     // console.log(parent.children[i].innerHTML);/
+    // }
+    // parent.children[1].style.color = "orange"
+    // // console.log(parent.firstElementChild.innerHTML);
+    // // console.log(parent.lastElementChild.innerHTML);
+    // const dayOne = document.querySelector('.day')
+    // // console.log(dayOne.innerHTML);
+    // // console.log(dayOne.parentElement.innerHTML);
+    // // console.log(dayOne.parentElement.innerText);
+    // // console.log(dayOne.nextElementSibling.innerText)
+    // console.log("Nodes: ", parent.childNodes);
+    
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Rajat"
+    const addText = document.createTextNode("Rajat")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html>
