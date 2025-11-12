@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulations</title>
+</head>
+<body style="background-color: #212121; color: #f1f1f1;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('ruby')
+
+    // optimized way
+    function optimalLang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    optimalLang('golang')
+
+    // Edit values
+    // we didnt hace
+    const secondLang = document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML = "mongo"
+
+    // optimized way (create a new element)
+    const newLi = document.createElement('li')
+    newLi.textContent = 'sql'
+    secondLang.replaceWith(newLi)
+
+    // edit javascript with typescript
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li>Typescript</li>'
+
+    // remove
+    const lastlng = document.querySelector('li:last-child')
+    lastlng.remove()
+</script>
+</html>
